@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>acceuil</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
+</head>
+<body>
+    <header>
+            <img src="{% static 'images/logo.jpg' %}">
+        </header>
+        <nav>
+            <div class="table">
+                <ul>
+                    <li class="menu-ind">
+                        <a href="index.html">Acceuil</a>
+                    </li>
+                    <li class="menu-bou">
+                        <a href="boutique.html">Boutique</a>
+                    </li>
+                    <li class="menu-serv">
+                        <a href="nos-service.html">Nos-Services</a>
+                    </li>
+                    <li class="menu-apro">
+                        <a href="apropos.html">Apropos</a>
+                    </li>
+                    <li class="menu-pan">
+                        <a href="panier.html">Panier</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+    {% block contenu %}
+    {% endblock %}
+
+    <h1>Footer</h1>
+</body>
+<style>
+     .sect1{
+    background-image: url("{% static 'images/baniere.jpg' %}");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    }
+ </style>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/test.css">
+    <link rel="stylesheet" href="/style/admin.css" />
+    <title>Connexion</title>
+</head>
+<body>
+    
+   <!-- <div class="loader">
+        <div class="lod"></div>
+    </div> -->
+
+    <h1 class="title"><a href="/">Page Acceuil</a> </h1>
+
+        <p class="popup">Votre compte a bien été creé !</p>
+
+    <p class="texte"> CRUD APP </p>
+   <div class="con">
+    <div class="container">
+        <form action="/connexion" method="POST">
+            <h1 class="inscription" style="text-align: center;">Connexion</h1>
+            <% if(locals.verif){%>
+                <div style="background-color: rgb(207, 51, 85); color: #fff; border-radius: 3px; margin-top: 15px; text-align: center;padding: 10px 0px;"><%=locals.mess%></div>
+            <%}%>
+
+            <div class="di"><input class="id" name="nom" type="text" required placeholder="votre nom"></div>
+            <div class="di"><input class="id" name="prenom" type="text" required placeholder="votre prenom"></div>
+            <div class="di"><input class="id" name="proffesion" type="text" required placeholder="votre proffession"></div>
+            <div class="di"><input class="id" name="email" type="email" required placeholder="votre adresse email"></div>
+            <div class="di"><input class="id" name="mdp" type="password" required placeholder="votre mot de passe"></div>
+
+            <div class="btn" style="display: flex; justify-content: center;">
+                <input type="submit" class="send" value="envoyer">
+            </div>
+
+        </form>
+    </div>
+   </div>
+   
+   <script type="module" src="../../src/loader.js"></script>
+</body>
+</html>
